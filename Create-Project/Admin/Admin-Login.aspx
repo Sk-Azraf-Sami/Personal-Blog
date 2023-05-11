@@ -13,6 +13,6 @@
                 <td><asp:TextBox ID="TxtPassword" runat="server"></asp:TextBox></td>
             </tr>
         </table>
-        <asp:Button ID="ButLogin" runat="server" Text="Login" class="btn btn-primary"> </asp:Button>
+        <asp:Button ID="ButLogin" runat="server" Text="Login" class="btn btn-primary" OnClick="ButLogin_Click"> </asp:Button>
     </center>
 </asp:Content>
