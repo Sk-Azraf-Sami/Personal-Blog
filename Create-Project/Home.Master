@@ -34,13 +34,22 @@
         <hr />
                     <ul class="list-group">
                         <li class="list-group-item d-flex justify-content-between align-items-center">Food
-    <span class="badge badge-primary badge-pill"></span>
-                        </li>
+    <span class="badge badge-primary badge-pill">
+        <asp:Label ID="LabFood" runat="server" Text="Label"></asp:Label>
+    </span>
+                                       </li>
+                        
+                        
                         <li class="list-group-item d-flex justify-content-between align-items-center">Sports
-    <span class="badge badge-primary badge-pill"></span>
+    <span class="badge badge-primary badge-pill">
+        <asp:Label ID="LabSports" runat="server" Text="Label"></asp:Label>
+    </span>
                         </li>
+                       
                         <li class="list-group-item d-flex justify-content-between align-items-center">Movies
-    <span class="badge badge-primary badge-pill"></span>
+    <span class="badge badge-primary badge-pill">
+        <asp:Label ID="LabMovies" runat="server" Text="Label"></asp:Label>
+    </span>
                         </li>
                     </ul>
                 </div>
