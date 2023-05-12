@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,7 +14,17 @@ namespace Create_Project.Movies
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            string mainconn = ConfigurationManager.ConnectionStrings["Myconnection"].ConnectionString;
+            SqlConnection sqlconn = new SqlConnection(mainconn);
+            string sqlquery = "select * from [dbo].[blog] where Bcatagory='Movies'";
+            sqlconn.Open();
+            SqlCommand sqlcomm = new SqlCommand(sqlquery, sqlconn);
+            SqlDataAdapter sda = new SqlDataAdapter(sqlcomm);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            RepBlogDetails.DataSource = dt;
+            RepBlogDetails.DataBind();
+            sqlconn.Close();
         }
     }
 }
