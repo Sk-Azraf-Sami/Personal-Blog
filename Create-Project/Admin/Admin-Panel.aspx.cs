@@ -33,7 +33,7 @@ namespace Create_Project.Admin
             sqlcomm.Parameters.AddWithValue("@Bcatagory", DDLBCat.SelectedItem.Text.ToString());
             sqlcomm.Parameters.AddWithValue("@BDesc", TxtBDesc.Text);
             sqlcomm.Parameters.AddWithValue("@BUrl", TxtBurl.Text);
-            sqlcomm.Parameters.AddWithValue("@Bposteddate", LabelBPosteddate.Text);
+            sqlcomm.Parameters.AddWithValue("@Bposteddate", "20100221 22:00:32");
             sqlcomm.ExecuteNonQuery();
             sqlconn.Close();
             Response.Redirect("~/Admin/Admin-Panel.aspx");
