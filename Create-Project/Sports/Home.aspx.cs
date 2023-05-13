@@ -16,7 +16,7 @@ namespace Create_Project.Sports
         {
             string mainconn = ConfigurationManager.ConnectionStrings["Myconnection"].ConnectionString;
             SqlConnection sqlconn = new SqlConnection(mainconn);
-            string sqlquery = "select * from [dbo].[blog] where Bcatagory='Sports'";
+            string sqlquery = "select * from [dbo].[blog] where Bcategory='Sports'";
             sqlconn.Open();
             SqlCommand sqlcomm = new SqlCommand(sqlquery, sqlconn);
             SqlDataAdapter sda = new SqlDataAdapter(sqlcomm);

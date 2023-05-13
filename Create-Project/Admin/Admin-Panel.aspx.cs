@@ -33,18 +33,18 @@ namespace Create_Project.Admin
             {
                 string mainconn = ConfigurationManager.ConnectionStrings["Myconnection"].ConnectionString;
                 SqlConnection sqlconn = new SqlConnection(mainconn);
-                string sqlquery = "insert into [dbo].[blog] (Btitle,Bcatagory,BDesc,BUrl,Bposteddate) values (@Btitle,@Bcatagory,@BDesc,@BUrl,@Bposteddate)";
+                string sqlquery = "insert into [dbo].[blog] (Btitle,Bcategory,BDesc,BUrl,Bposteddate) values (@Btitle,@Bcategory,@BDesc,@BUrl,@Bposteddate)";
                 sqlconn.Open();
                 SqlCommand sqlcomm = new SqlCommand(sqlquery, sqlconn);
                 sqlcomm.Parameters.AddWithValue("@Btitle", TxtBlogTitle.Text);
-                sqlcomm.Parameters.AddWithValue("@Bcatagory", DDLBCat.SelectedItem.Text.ToString());
+                sqlcomm.Parameters.AddWithValue("@Bcategory", DDLBCat.SelectedItem.Text.ToString());
                 sqlcomm.Parameters.AddWithValue("@BDesc", TxtBDesc.Text);
                 sqlcomm.Parameters.AddWithValue("@BUrl", TxtBurl.Text);
                 sqlcomm.Parameters.AddWithValue("@Bposteddate", LabelBPosteddate.Text);
                 sqlcomm.ExecuteNonQuery();
                 sqlconn.Close();
 
-                //IF I use this line, double entry insert in database.
+               
                 Response.Redirect("~/Admin/Admin-Panel.aspx");
             }
         }

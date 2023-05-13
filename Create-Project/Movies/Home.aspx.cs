@@ -16,7 +16,7 @@ namespace Create_Project.Movies
         {
             string mainconn = ConfigurationManager.ConnectionStrings["Myconnection"].ConnectionString;
             SqlConnection sqlconn = new SqlConnection(mainconn);
-            string sqlquery = "select * from [dbo].[blog] where Bcatagory='Movies'";
+            string sqlquery = "select * from [dbo].[blog] where Bcategory='Movies'";
             sqlconn.Open();
             SqlCommand sqlcomm = new SqlCommand(sqlquery, sqlconn);
             SqlDataAdapter sda = new SqlDataAdapter(sqlcomm);

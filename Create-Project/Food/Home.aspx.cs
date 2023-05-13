@@ -16,7 +16,7 @@ namespace Create_Project.Food
         {
             string mainconn = ConfigurationManager.ConnectionStrings["Myconnection"].ConnectionString;
             SqlConnection sqlconn = new SqlConnection(mainconn);
-            string sqlquery = "select * from [dbo].[blog] where Bcatagory='Food'";
+            string sqlquery = "select * from [dbo].[blog] where Bcategory='Food'";
             sqlconn.Open();
             SqlCommand sqlcomm = new SqlCommand(sqlquery, sqlconn);
             SqlDataAdapter sda = new SqlDataAdapter(sqlcomm);

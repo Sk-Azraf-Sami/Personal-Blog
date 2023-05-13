@@ -19,7 +19,7 @@ namespace Create_Project
         {
             string mainconn = ConfigurationManager.ConnectionStrings["Myconnection"].ConnectionString;
             SqlConnection sqlconn = new SqlConnection(mainconn);
-            string sqlquery = "select COUNT(case when Bcatagory = 'Food' then 1 end) as Food, COUNT(case when Bcatagory = 'Sports' then 1 end) as Sports, COUNT(case when Bcatagory = 'Movies' then 1 end) as Movies from [dbo].[blog]";
+            string sqlquery = "select COUNT(case when Bcategory = 'Food' then 1 end) as Food, COUNT(case when Bcategory = 'Sports' then 1 end) as Sports, COUNT(case when Bcategory = 'Movies' then 1 end) as Movies from [dbo].[blog]";
             sqlconn.Open();
             SqlCommand sqlcomm = new SqlCommand(sqlquery, sqlconn);
             SqlDataReader sdr = sqlcomm.ExecuteReader();
