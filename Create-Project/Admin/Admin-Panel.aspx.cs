@@ -17,7 +17,10 @@ namespace Create_Project.Admin
         {
             if(!Page.IsPostBack)
             {
-                LabelBPosteddate.Text = DateTime.Now.ToString();
+                DateTime currentDate = DateTime.Now;
+                string formattedDate = currentDate.ToString("yyyy-MM-dd HH:mm:ss"); // use the format that matches your database's datetime format
+                LabelBPosteddate.Text = formattedDate;
+
                 DDLBCat.Items.Insert(0,"--Select Category--");
             }
         }
@@ -33,7 +36,7 @@ namespace Create_Project.Admin
             sqlcomm.Parameters.AddWithValue("@Bcatagory", DDLBCat.SelectedItem.Text.ToString());
             sqlcomm.Parameters.AddWithValue("@BDesc", TxtBDesc.Text);
             sqlcomm.Parameters.AddWithValue("@BUrl", TxtBurl.Text);
-            sqlcomm.Parameters.AddWithValue("@Bposteddate", "20100221 22:00:32");
+            sqlcomm.Parameters.AddWithValue("@Bposteddate", LabelBPosteddate.Text);
             sqlcomm.ExecuteNonQuery();
             sqlconn.Close();
             Response.Redirect("~/Admin/Admin-Panel.aspx");
