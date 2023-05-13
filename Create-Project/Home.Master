@@ -48,7 +48,7 @@
                        
                         <li class="list-group-item d-flex justify-content-between align-items-center">Movies
     <span class="badge badge-primary badge-pill">
-       <a class="p-2 text-dark" href="Sports/Home.aspx" runat="server"> <asp:Label ID="LabMovies" runat="server" Text="Label"></asp:Label></a>
+       <a class="p-2 text-dark" href="Movies/Home.aspx" runat="server"> <asp:Label ID="LabMovies" runat="server" Text="Label"></asp:Label></a>
     </span>
                         </li>
                     </ul>
