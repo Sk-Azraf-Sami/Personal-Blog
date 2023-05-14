@@ -12,7 +12,8 @@
 3. https://getbootstrap.com/docs/4.3/getting-started/introduction/ <br>
 4. https://getbootstrap.com/docs/4.3/layout/grid/
 
-😕 **SSMS Server Name Not Showing** [source](https://youtu.be/bgB2xeB6IM8) <br>
-😕**SSMS: The Certificate Chain was issued by an authority that is not trusted** [source](https://youtu.be/QJ2h9-PrLXQ) <br>
-😕 **Error: The conversion of a nvarchar data type to a smalldatetime data type resulted in an out-of-range value** [source](https://stackoverflow.com/questions/2307550/error-the-conversion-of-a-nvarchar-data-type-to-a-smalldatetime-data-type-resul) 
+**Errors and Solutions** <br>
+😕<i>SSMS Server Name Not Showing</i> [source](https://youtu.be/bgB2xeB6IM8) <br>
+😕<i>SSMS: The Certificate Chain was issued by an authority that is not trusted</i> [source](https://youtu.be/QJ2h9-PrLXQ) <br>
+😕<i>The conversion of a nvarchar data type to a smalldatetime data type resulted in an out-of-range value</i> [source](https://stackoverflow.com/questions/2307550/error-the-conversion-of-a-nvarchar-data-type-to-a-smalldatetime-data-type-resul) 
 
