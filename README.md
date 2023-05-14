@@ -1,4 +1,4 @@
-# Personal-Blog
+# Personal-Blog (asp.net c# & SQL Server)
 
 ⭐ **Tutorial:** [YouTube](https://youtu.be/ETEHlrwvE6Q)
 
